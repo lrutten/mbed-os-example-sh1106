@@ -127,29 +127,29 @@ However, SH1106 driver don't provide several functions such as scroll commands.
 class Adafruit_SH1106 : public Adafruit_GFX
 {
 public:
-  Adafruit_SH1106();
+   Adafruit_SH1106();
 
-  void begin(uint8_t switchvcc = SH1106_SWITCHCAPVCC, uint8_t i2caddr = SH1106_I2C_ADDRESS, bool reset=true);
-  void SH1106_command(uint8_t c);
-  void SH1106_data(uint8_t c);
+   void begin(uint8_t switchvcc = SH1106_SWITCHCAPVCC, uint8_t i2caddr = SH1106_I2C_ADDRESS, bool reset=true);
+   void SH1106_command(uint8_t c);
+   void SH1106_data(uint8_t c);
 
-  void clearDisplay(void);
-  void invertDisplay(uint8_t i);
-  void display();
+   void clearDisplay(void);
+   void invertDisplay(uint8_t i);
+   void display();
 
-  /*void startscrollright(uint8_t start, uint8_t stop);
-  void startscrollleft(uint8_t start, uint8_t stop);
+   /*void startscrollright(uint8_t start, uint8_t stop);
+   void startscrollleft(uint8_t start, uint8_t stop);
 
-  void startscrolldiagright(uint8_t start, uint8_t stop);
-  void startscrolldiagleft(uint8_t start, uint8_t stop);
-  void stopscroll(void); */
+   void startscrolldiagright(uint8_t start, uint8_t stop);
+   void startscrolldiagleft(uint8_t start, uint8_t stop);
+   void stopscroll(void); */
   
-  void dim(uint8_t contrast);
+   void dim(uint8_t contrast);
 
-  void drawPixel(int16_t x, int16_t y, uint16_t color);
+   void drawPixel(int16_t x, int16_t y, uint16_t color);
 
-  virtual void drawFastVLine(int16_t x, int16_t y, int16_t h, uint16_t color);
-  virtual void drawFastHLine(int16_t x, int16_t y, int16_t w, uint16_t color);
+   virtual void drawFastVLine(int16_t x, int16_t y, int16_t h, uint16_t color);
+   virtual void drawFastHLine(int16_t x, int16_t y, int16_t w, uint16_t color);
 
 private:
    I2C    i2c;

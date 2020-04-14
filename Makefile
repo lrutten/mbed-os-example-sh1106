@@ -32,8 +32,8 @@ openocd:
 	openocd -f /usr/share/openocd/scripts/board/st_nucleo_f4.cfg
 
 ddd: compile-debug
-	ddd --debugger arm-none-eabi-gdb BUILD/NUCLEO_F446RE/GCC_ARM/mbed-os-example-ssd1306.elf
+	ddd --debugger arm-none-eabi-gdb BUILD/NUCLEO_F446RE/GCC_ARM/mbed-os-example-sh1106.elf
 
 gdb: compile-debug
-	arm-none-eabi-gdb -batch -ex "target remote localhost:3333" -ex "load" -ex "continue" BUILD/NUCLEO_F446RE/GCC_ARM-DEBUG/mbed-os-example-ssd1306-quad.elf
+	arm-none-eabi-gdb -batch -ex "target remote localhost:3333" -ex "load" -ex "continue" BUILD/NUCLEO_F446RE/GCC_ARM-DEBUG/mbed-os-example-sh1106.elf
 
