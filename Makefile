@@ -12,6 +12,9 @@ compile:
 copy:
 	cp -v ./BUILD/NUCLEO_F446RE/GCC_ARM/midiplayer.bin /mnt/hd
 
+copy-debug:
+	cp -v ./BUILD/NUCLEO_F446RE/GCC_ARM-DEBUG/mbed-os-example-sh1106.bin /mnt/hd
+
 screen:
 	screen /dev/ttyACM0
 
